@@ -11,7 +11,7 @@ $path = 'https://randomuser.me/api/?results=20';
 $jsonString = file_get_contents($path);
 $jsonData = json_decode($jsonString, true);
 
-debug($jsonData)
+/* debug($jsonData) */
 
 ?>
 <!DOCTYPE html>
@@ -31,7 +31,8 @@ debug($jsonData)
             text-decoration: underline;
         }
         article{
-            
+            text-align: center;
+            border: solid 1px black;
         }
     </style>
 </head>
@@ -42,7 +43,7 @@ debug($jsonData)
         foreach ($jsonData["results"] as $user) {
         ?>
             <article>
-                <img src="<?= $user["picture"]["medium"] ?>" alt="">
+                <img src="<?= $user["picture"]["large"] ?>" alt="">
                 <?php 
                 if ($user["gender"] === "female" ){
                     echo '<p class="fem">'.$user["name"]["first"]."</p>";
