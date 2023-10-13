@@ -33,6 +33,7 @@ $jsonData = json_decode($jsonString, true);
         article{
             text-align: center;
             border: solid 1px black;
+            min-width: 16rem;
         }
     </style>
 </head>
