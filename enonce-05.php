@@ -27,10 +27,12 @@ $jsonData = json_decode($jsonString, true);
             flex-wrap: wrap;
             gap: 2rem;
         }
-        .fem{
+
+        .fem {
             text-decoration: underline;
         }
-        article{
+
+        article {
             text-align: center;
             border: solid 1px black;
             min-width: 16rem;
@@ -45,13 +47,13 @@ $jsonData = json_decode($jsonString, true);
         ?>
             <article>
                 <img src="<?= $user["picture"]["large"] ?>" alt="">
-                <?php 
-                if ($user["gender"] === "female" ){
-                    echo '<p class="fem">'.$user["name"]["first"]."</p>";
-                    echo '<p class="fem">'.$user["name"]["last"]."</p>";
-                }else{
-                    echo '<p>'.$user["name"]["first"]."</p>";
-                    echo '<p>'.$user["name"]["last"]."</p>";
+                <?php
+                if ($user["gender"] === "female") {
+                    echo '<p class="fem">' . $user["name"]["first"] . "</p>";
+                    echo '<p class="fem">' . $user["name"]["last"] . "</p>";
+                } else {
+                    echo '<p>' . $user["name"]["first"] . "</p>";
+                    echo '<p>' . $user["name"]["last"] . "</p>";
                 }
                 ?>
                 <p><?= $user["email"] ?></p>
